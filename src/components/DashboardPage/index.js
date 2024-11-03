@@ -39,8 +39,9 @@ function DashboardPage() {
   const handleWelcomeClick = () => {
     dispatch(setQuery(''));
     dispatch(setPage(0));
-    navigate('/dashboard');
-  };
+    window.location.reload(); 
+};
+
 
   return (
     <div>
@@ -55,22 +56,29 @@ function DashboardPage() {
       </header>
 
       <div className="sorting-options">
-        <select value={contentType} onChange={(e) => dispatch(setContentType(e.target.value))}>
-          <option value="">Select Content Type</option>
+        <select value={contentType} onChange={(e) => {
+          dispatch(setContentType(e.target.value));
+          dispatch(setPage(0));
+        }}>
           <option value="all">All</option>
-          <option value="stories">Stories</option>
+          <option value="story">Stories</option>
           <option value="ask_hn">Ask HN</option>
           <option value="launch_hn">Launch HN</option>
-          <option value="jobs">Jobs</option>
+          <option value="job">Jobs</option>
         </select>
 
-        <select value={sortBy} onChange={(e) => dispatch(setSortBy(e.target.value))}>
-          <option value="">Select Sort Option</option>
+        <select value={sortBy} onChange={(e) => {
+          dispatch(setSortBy(e.target.value));
+          dispatch(setPage(0));
+        }}>
           <option value="popularity">Popularity</option>
           <option value="comments">Comments</option>
         </select>
 
-        <select value={timeFrame} onChange={(e) => dispatch(setTimeFrame(e.target.value))}>
+        <select value={timeFrame} onChange={(e) => {
+          dispatch(setTimeFrame(e.target.value));
+          dispatch(setPage(0));
+        }}>
           <option value="all">All Time</option>
           <option value="last24h">Last 24h</option>
           <option value="pastWeek">Past Week</option>
@@ -79,13 +87,21 @@ function DashboardPage() {
         </select>
       </div>
 
-      <SearchResults results={results} />
+      {results && results.length > 0 ? (
+        <SearchResults results={results} />
+      ) : (
+        <p>No results found.</p>
+      )}
+
       <Pagination currentPage={page} totalPages={totalPages} onPageChange={handlePageChange} />
     </div>
   );
 }
 
 export default DashboardPage;
+
+
+
 
 
 
