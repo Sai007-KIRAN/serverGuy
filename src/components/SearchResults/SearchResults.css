@@ -1,0 +1,53 @@
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    padding: 5px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  li a {
+    text-decoration: none;
+    color: black; 
+    font-size: 1.1rem;
+    font-weight: 300;
+  }
+  
+  li a:hover {
+    text-decoration: underline;
+  }
+  
+  li span {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+.rowWise{
+    display: flex;
+    flex-direction: row;
+}
+
+.resize{
+    margin-top: -18px;
+    margin-left: 5px;
+}
+
+.underLines{
+    text-decoration: underline;
+}
+.wising{
+    display: flex;
+}
+
+.description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 10;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5;
+}
