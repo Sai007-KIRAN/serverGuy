@@ -10,6 +10,7 @@ import { faHouseLaptop } from '@fortawesome/free-solid-svg-icons';
 import './DashboardPage.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 
+
 function DashboardPage() {
   const username = localStorage.getItem('username');
   const navigate = useNavigate();
