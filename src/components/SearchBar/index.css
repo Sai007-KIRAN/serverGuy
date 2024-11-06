@@ -1,18 +1,23 @@
 
 .search-bar {
     display: flex;
-    align-items: center;
+    justify-content: center;
+    align-self: center;
     gap: 10px;
     padding: 10px;
     background-color: #f5f5f5;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    height: 70px; 
+    width: 500px;
+    margin: 0 auto;
 }
 
+
 input {
-    width: 250px;
-    height: 30px;
-    padding: 5px;
+    width: 650px;
+    height: 45px;
+    padding: 10px;
     border-radius: 5px;
     border-width: 0px;
 }

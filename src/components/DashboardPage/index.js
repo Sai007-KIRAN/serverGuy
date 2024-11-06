@@ -53,11 +53,11 @@ function DashboardPage() {
         <div className="header-left">
            <Link to="#" className='head' onClick={handleWelcomeClick} style={{ display: 'flex', alignItems: 'center' }}>
 
-             <FontAwesomeIcon icon={faHouseLaptop} style={{ marginRight: '8px' , height: 25}} />
-             <h2>{username}</h2> {"\u00A0"}
+           {"\u00A0"} <FontAwesomeIcon icon={faHouseLaptop} style={{ marginRight: '8px' , height: 25}} />
+             <h2 className='changes'>{username}</h2>
            </Link>
-          <SearchBar onSearch={handleSearch} />
         </div>
+        <SearchBar onSearch={handleSearch} />
         <button onClick={handleLogout}>Logout</button>
       </header>
 
@@ -105,6 +105,7 @@ function DashboardPage() {
 }
 
 export default DashboardPage;
+
 
 
 

@@ -37,7 +37,7 @@ function SearchBar({ onSearch }) {
     <div>
       <input
         type="text"
-        placeholder="Search Hacker News"
+        placeholder="Search stories by title, url or author"
         value={searchTerm}
         onChange={handleInputChange}
       />

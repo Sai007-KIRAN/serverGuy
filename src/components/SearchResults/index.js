@@ -15,7 +15,9 @@ function SearchResults({ results }) {
               <div className='resize'>
                 <p>
                   <a href={item.url || "#"} className='underLines'>
-                  <p>{item.url && `(${item.url})`}</p>
+                  <p style={{ color: 'rgba(0, 0, 0, 0.6)' }}>
+                    {item.url && `(${item.url})`}
+                  </p>
                   </a>
                 </p>
               </div>
