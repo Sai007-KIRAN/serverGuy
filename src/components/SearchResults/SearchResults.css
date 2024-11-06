@@ -1,4 +1,4 @@
-ul {
+/* ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -50,4 +50,87 @@ ul {
     overflow: hidden;
     text-overflow: ellipsis;
     line-height: 1.5;
+} */
+
+
+/* Reset default list styling */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style each result item */
+li {
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.3s ease;
+}
+
+li:hover {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+/* Link styling */
+li a {
+  text-decoration: none;
+  color: #333; 
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+li a:hover {
+  text-decoration: underline;
+}
+
+/* Subtext styling */
+li span {
+  display: block;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* Row layout for title and URL */
+.rowWise {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+/* URL styling with smaller font */
+.resize {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Underlined link styling */
+.underLines {
+  text-decoration: underline;
+  color: #0073e6;
+}
+
+/* Points, author, and comments layout */
+.wising {
+  display: flex;
+  gap: 5px;
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 8px;
+}
+
+/* Description with gradient overflow */
+.description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.6;
+  margin-top: 10px;
+  color: #555;
+  position: relative;
+  background: linear-gradient(to bottom, #ffffff 80%, rgba(255, 255, 255, 0));
+  padding-bottom: 15px;
 }
